@@ -1,15 +1,17 @@
+package br.senai.sp.jandira.tabuada.model;
+
 import java.util.Scanner;
 
-public class Usuario {
+public class Tabuada {
 
-        int multiplicando;
-        int multiplicadorInicial;
-        int multiplicadorFinal;
+       public int multiplicando;
+       public int multiplicadorInicial;
+       public int multiplicadorFinal;
         int apoio;
         int tamanho;
         int i;
         int produto;
-        String[] tabuada;
+       public String[] tabuada;
 
         public void obterInfomacoes(){
             Scanner leitor = new Scanner(System.in);
@@ -26,7 +28,7 @@ public class Usuario {
             calcularTabuada();
         }
 
-        public void calcularTabuada(){
+        public String[] calcularTabuada(){
             if (multiplicadorInicial > multiplicadorFinal){
                 apoio = multiplicadorInicial;
                 multiplicadorInicial = multiplicadorFinal;
@@ -44,7 +46,8 @@ public class Usuario {
                 i++;
             }
 
-            exibirTabuada();
+            return tabuada;
+            //exibirTabuada();
         }
 
         public void exibirTabuada(){

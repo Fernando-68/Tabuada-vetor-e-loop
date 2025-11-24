@@ -1,11 +1,11 @@
-public class Tabuada {
+import br.senai.sp.jandira.tabuada.gui.TelaTabuada;
+import br.senai.sp.jandira.tabuada.model.Tabuada;
+import javafx.application.Application;
+
+public class TabuadaMain {
 
     public static void main(String[] args) {
 
-        System.out.println("Iniciando a calculadora...");
-
-        Usuario usuario = new Usuario();
-
-        usuario.obterInfomacoes();
+        Application.launch(TelaTabuada.class, args);
     }
 }
